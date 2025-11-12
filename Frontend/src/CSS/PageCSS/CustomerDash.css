@@ -1,0 +1,36 @@
+/* src/CSS/PageCSS/CustomerDash.css */
+.customer-dashboard {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.customer-main-content {
+  flex: 1;
+  margin-left: 280px;
+  transition: margin-left 0.3s ease;
+}
+
+.customer-main-content.collapsed {
+  margin-left: 80px;
+}
+
+.customer-content-area {
+  padding: 20px;
+  margin-top: 70px;
+}
+
+@media (max-width: 768px) {
+  .customer-main-content {
+    margin-left: 0;
+  }
+  
+  .customer-main-content.collapsed {
+    margin-left: 0;
+  }
+  
+  .customer-content-area {
+    padding: 15px;
+    margin-top: 60px;
+  }
+}

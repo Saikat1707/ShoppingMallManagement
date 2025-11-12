@@ -1,0 +1,138 @@
+/* src/components/ShopOwnerDashboard/EmployeeManagement/EmployeeManagement.css */
+.employee-management {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.employees-list {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.employees-table {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: #f1f1f1;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.table-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr;
+  gap: 1px;
+  background: #667eea;
+  color: white;
+  font-weight: 600;
+}
+
+.table-header span {
+  padding: 15px;
+  text-align: left;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 2fr 1fr 1fr 1fr;
+  gap: 1px;
+  background: white;
+  transition: background 0.3s ease;
+}
+
+.table-row:hover {
+  background: #f8f9fa;
+}
+
+.table-row span {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.name-cell {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: #333;
+}
+
+.employee-avatar {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+
+.role-cell {
+  color: #666;
+  font-weight: 500;
+}
+
+.contact-cell {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.contact-cell .phone {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.salary-cell {
+  font-weight: 600;
+  color: #059669;
+}
+
+.status-cell {
+  display: flex;
+  align-items: center;
+}
+
+.actions-cell {
+  display: flex;
+  gap: 5px;
+}
+
+@media (max-width: 1024px) {
+  .table-header,
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .table-row {
+    padding: 15px;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .table-row span::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: 10px;
+    color: #666;
+    min-width: 80px;
+  }
+  
+  .name-cell,
+  .contact-cell {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

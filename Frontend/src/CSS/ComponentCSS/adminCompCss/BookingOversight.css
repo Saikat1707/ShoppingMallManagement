@@ -1,0 +1,289 @@
+/* src/components/AdminDashboard/BookingOversight/BookingOversight.css */
+.booking-oversight {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-stats-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.stat-card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transition: transform 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: #fef3c7;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-info h3 {
+  margin: 0 0 5px 0;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.stat-info p {
+  margin: 0;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.oversight-controls {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.bookings-table-container {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.table-header {
+  background: #1f2937;
+  color: white;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr 1.5fr;
+  gap: 1px;
+  background: #f3f4f6;
+}
+
+.table-row.header-row {
+  background: #1f2937;
+}
+
+.table-cell {
+  padding: 20px;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+
+.header-row .table-cell {
+  background: #1f2937;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.booking-details {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.shop-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 1rem;
+}
+
+.booking-date {
+  color: #374151;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.booking-created {
+  color: #6b7280;
+  font-size: 0.8rem;
+}
+
+.customer-info {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.customer-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.customer-phone {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.service-info {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.service-name {
+  font-weight: 600;
+  color: #1f2937;
+  font-size: 0.95rem;
+}
+
+.employee-name {
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.booking-notes {
+  background: #f3f4f6;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  color: #374151;
+  margin-top: 5px;
+}
+
+.booking-amount {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #059669;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  text-transform: capitalize;
+}
+
+.actions {
+  justify-content: center;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.booking-details-modal {
+  max-width: 600px;
+}
+
+.booking-details-content {
+  max-height: 60vh;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.shop-customer-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.info-group h4 {
+  margin: 0 0 15px 0;
+  color: #1f2937;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+.info-group p {
+  margin: 0 0 8px 0;
+  color: #374151;
+}
+
+.service-details,
+.schedule-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.notes-content {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 8px;
+  color: #475569;
+  line-height: 1.5;
+  border-left: 4px solid #fbbf24;
+}
+
+@media (max-width: 1024px) {
+  .table-row {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .table-header {
+    display: none;
+  }
+  
+  .table-cell {
+    padding: 0;
+    background: transparent;
+  }
+  
+  .table-cell::before {
+    content: attr(data-label);
+    font-weight: 600;
+    margin-right: 10px;
+    color: #6b7280;
+    min-width: 100px;
+  }
+  
+  .oversight-controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .shop-customer-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-stats-overview {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+  }
+}

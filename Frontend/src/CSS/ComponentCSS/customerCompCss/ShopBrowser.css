@@ -1,0 +1,358 @@
+/* src/components/CustomerDashboard/ShopBrowser/ShopBrowser.css */
+.shop-browser {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.shop-browser-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.shop-browser-header h1 {
+  margin: 0 0 10px 0;
+  color: #1e293b;
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.shop-browser-header p {
+  margin: 0;
+  color: #64748b;
+  font-size: 1.1rem;
+}
+
+.shop-filters {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 15px 50px 15px 20px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.search-icon {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #64748b;
+}
+
+.category-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.category-btn {
+  background: #f8fafc;
+  border: 2px solid #e2e8f0;
+  padding: 10px 20px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.category-btn:hover {
+  border-color: #3b82f6;
+  color: #3b82f6;
+}
+
+.category-btn.active {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: white;
+}
+
+.shops-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 25px;
+}
+
+.shop-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.shop-card-header {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.shop-image {
+  font-size: 3rem;
+  width: 80px;
+  height: 80px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shop-basic-info {
+  flex: 1;
+}
+
+.shop-basic-info h3 {
+  margin: 0 0 8px 0;
+  color: #1e293b;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.shop-category {
+  background: #dbeafe;
+  color: #1d4ed8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.shop-rating {
+  margin-top: 8px;
+}
+
+.rating {
+  color: #f59e0b;
+  font-weight: 600;
+  margin-right: 8px;
+}
+
+.reviews {
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.shop-details {
+  flex: 1;
+  margin-bottom: 20px;
+}
+
+.shop-location {
+  color: #64748b;
+  margin: 0 0 12px 0;
+  font-size: 0.95rem;
+}
+
+.shop-description {
+  color: #475569;
+  line-height: 1.5;
+  margin: 0 0 15px 0;
+}
+
+.shop-services, .shop-offers {
+  margin-bottom: 15px;
+}
+
+.shop-services strong, .shop-offers strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #1e293b;
+  font-size: 0.9rem;
+}
+
+.service-tags, .offer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.service-tag, .offer-tag {
+  background: #f8fafc;
+  color: #475569;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.service-tag.more {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.offer-tag {
+  background: #f0f9ff;
+  color: #0c4a6e;
+  font-size: 0.75rem;
+}
+
+.shop-timing {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin-top: 15px;
+}
+
+.book-now-btn {
+  background: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: auto;
+}
+
+.book-now-btn:hover {
+  background: #2563eb;
+}
+
+.no-shops-found {
+  text-align: center;
+  padding: 60px 20px;
+  grid-column: 1 / -1;
+}
+
+.no-shops-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.no-shops-found h3 {
+  margin: 0 0 10px 0;
+  color: #64748b;
+}
+
+.no-shops-found p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.booking-modal {
+  max-width: 500px;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.modal-header h2 {
+  margin: 0;
+  color: #1e293b;
+}
+
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #64748b;
+  padding: 5px;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.close-btn:hover {
+  background: #f1f5f9;
+}
+
+.shop-booking-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  padding: 15px;
+  background: #f8fafc;
+  border-radius: 10px;
+}
+
+.shop-booking-image {
+  font-size: 2rem;
+  width: 60px;
+  height: 60px;
+  background: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.shop-booking-info h3 {
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+.shop-booking-info p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+@media (max-width: 768px) {
+  .shops-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .shop-filters {
+    padding: 20px;
+  }
+  
+  .category-filters {
+    justify-content: center;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .shop-card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .shop-image {
+    align-self: center;
+  }
+}

@@ -1,0 +1,153 @@
+/* src/components/AdminDashboard/AdminHeader/AdminHeader.css */
+.admin-header {
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 0 25px;
+  height: 70px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  transition: left 0.3s ease;
+}
+
+.admin-main-content.collapsed ~ .admin-header {
+  left: 80px;
+}
+
+.admin-header-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.admin-menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+  color: #1f2937;
+}
+
+.admin-menu-toggle:hover {
+  background: #f3f4f6;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.admin-header-right {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.admin-notifications {
+  position: relative;
+}
+
+.admin-icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  color: #6b7280;
+}
+
+.admin-icon-btn:hover {
+  background: #f3f4f6;
+  color: #1f2937;
+}
+
+.admin-notification-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ef4444;
+  color: white;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.admin-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  background: #1f2937;
+  color: white;
+}
+
+.admin-profile:hover {
+  background: #374151;
+}
+
+.admin-avatar {
+  width: 45px;
+  height: 45px;
+  background: linear-gradient(135deg, #fbbf24 0%, #d97706 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f2937;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.admin-profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.admin-role {
+  font-size: 0.8rem;
+  color: #d1d5db;
+}
+
+@media (max-width: 768px) {
+  .admin-header {
+    left: 0;
+    padding: 0 20px;
+  }
+  
+  .admin-main-content.collapsed ~ .admin-header {
+    left: 0;
+  }
+  
+  .admin-header h1 {
+    font-size: 1.3rem;
+  }
+  
+  .admin-profile-info {
+    display: none;
+  }
+}
