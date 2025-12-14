@@ -9,7 +9,7 @@ import {
   getBookingsByShop,
   changeStatus,
 } from "../Controller/bookingController.js";
-import { verifyToken } from "../middleware/verifyToken.js";
+import { verifyToken } from "../middleware/authValidator.js";
 
 const router = express.Router();
 

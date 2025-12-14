@@ -7,26 +7,9 @@ import {
   deleteSale,
   getSalesSummary,
 } from "../Controller/saleController.js";
-import { verifyToken } from "../middleware/verifyToken.js";
+import { verifyToken } from "../middleware/authValidator.js";
 
 const router = express.Router();
-
-/* 
---------------------------------------------
-🧾 SALE ROUTES — Access Permissions Summary
---------------------------------------------
-🔹 Admin:
-   - Can perform all actions (full access)
-
-🔹 Shop Owner:
-   - Can create sales for their own shop
-   - Can view and manage sales of their shop
-   - Can view summary of their shop’s sales
-
-🔹 Customer:
-   - ❌ No direct access to sale routes
---------------------------------------------
-*/
 
 // 🛒 Create a sale (Shop Owner / Admin)
 router.post("/", verifyToken, createSale);
